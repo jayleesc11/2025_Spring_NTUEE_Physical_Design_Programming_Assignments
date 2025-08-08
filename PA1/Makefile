@@ -1,0 +1,17 @@
+CC=g++
+LDFLAGS=-std=c++11 -O3 -lm
+SOURCES=src/partitioner.cpp src/main.cpp
+OBJECTS=$(SOURCES:.c=.o)
+EXECUTABLE=bin/fm
+INCLUDES=src/cell.h src/net.h src/partitioner.h
+
+all: $(SOURCES) $(EXECUTABLE)
+
+$(EXECUTABLE): $(OBJECTS)
+	$(CC) $(LDFLAGS) $(OBJECTS) -o $@
+
+%.o: %.c ${INCLUDES}
+	$(CC) $(CFLAGS) $< -o $@
+
+clean:
+	rm -rf *.o $(EXECUTABLE)

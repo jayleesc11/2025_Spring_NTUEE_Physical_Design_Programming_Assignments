@@ -1,0 +1,13 @@
+BasedOnStyle: Google
+AccessModifierOffset: -2
+AlignConsecutiveAssignments:
+  Enabled: true
+  AlignCompound: true
+AlignConsecutiveMacros:
+  Enabled: true
+AlignConsecutiveShortCaseStatements:
+  Enabled: true
+  AlignCaseColons: true
+AllowShortBlocksOnASingleLine: Always
+ColumnLimit: 150
+IndentWidth: 4
